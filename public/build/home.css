@@ -1,0 +1,15 @@
+.container-fluid {
+  min-height: 100vh;
+}
+
+.row {
+  margin-top: 50vh;
+  transform: translateY(-50%);
+}
+
+img {
+  margin: 0 auto !important;
+}
+
+
+/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vaG9tZS5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0ksaUJBQWlCO0FBQ3JCOztBQUVBO0VBQ0ksZ0JBQWdCO0VBQ2hCLDJCQUEyQjtBQUMvQjs7QUFFQTtFQUNJLHlCQUF5QjtBQUM3QiIsImZpbGUiOiJob21lLmNzcyIsInNvdXJjZXNDb250ZW50IjpbIi5jb250YWluZXItZmx1aWQge1xuICAgIG1pbi1oZWlnaHQ6IDEwMHZoO1xufVxuXG4ucm93IHtcbiAgICBtYXJnaW4tdG9wOiA1MHZoO1xuICAgIHRyYW5zZm9ybTogdHJhbnNsYXRlWSgtNTAlKTtcbn1cblxuaW1nIHtcbiAgICBtYXJnaW46IDAgYXV0byAhaW1wb3J0YW50O1xufSJdLCJzb3VyY2VSb290IjoiIn0=*/
