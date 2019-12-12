@@ -13,7 +13,7 @@ class WildController extends AbstractController
     public function index()
     {
         return $this->render('wild/index.html.twig', [
-            'controller_name' => 'WildController',
+            'current_menu' => 'Accueil',
         ]);
     }
 }

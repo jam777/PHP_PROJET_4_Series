@@ -1,7 +1,16 @@
-{% extends 'base.html.twig' %}
+{% extends 'base.html.twig' %} 
 
-{% block title %}Hello DefaultController!{% endblock %}
+{% block title %}Bienvenue{% endblock %}
+
+ {% block stylesheets %} 
+    {{ parent() }}
+    {{ encore_entry_link_tags('home') }}
+{% endblock %} 
 
 {% block body %}
-    <h1>Bienvenue</h1>
+
+<div class="row">
+    <img src="http://bestseriestv.free.fr/SeriesTv.png" class="img-fluid" alt="Responsive image">
+</div>
+
 {% endblock %}
