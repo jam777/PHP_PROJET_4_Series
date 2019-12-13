@@ -3,11 +3,11 @@
 //Couleur de fond du site
 $col_body:#6ECCCB;
 html {
+    font-size: 100%;
     font-family: 'Roboto', Arial, Verdana;
     position: relative;
 }
 
 body {
     background-color: $col_body;
-    margin-top: 80px;
 }
