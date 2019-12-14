@@ -1,5 +1,4 @@
-<nav class="navbar navbar-expand-md navbar-dark bg-dark py-0 mb-5 ">
-    <img class="m-0 pt-2" src="https://img.icons8.com/cotton/64/000000/tv-show.png">
+<nav class="navbar navbar-expand-md navbar-dark bg-dark py-0 mb-5 px-0">
     <a class="navbar-brand ml-2" href="{{ path('app_index') }}">Wild Series</a>
 
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -7,12 +6,19 @@
     </button>
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mr-auto w-100 justify-content-between">
+        <ul class="navbar-nav mx-4 w-100 justify-content-between">
             <li class="nav-item">
                 <a class="nav-link" href="{{ path('wild_index') }}" {% if current_menu=="Accueil" %} style="border-bottom:solid 7px #B85C5C;padding-bottom:1px;" {% endif %}>Accueil</a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Catégories</a>
+
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Catégories
+                </a>
+                <div class="dropdown-menu px-4" aria-labelledby="navbarDropdown">
+                    {% for i in 1..6 %}
+                    <button type="button" class="btn btn-outline-danger"> <a  href="#"></a>Action{{ i }}</button> {% endfor %}
+                </div>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="#">Acteurs</a>

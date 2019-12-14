@@ -5,7 +5,6 @@
   "build/home.js": "/build/home.js",
   "build/runtime.js": "/build/runtime.js",
   "build/vendors~app~home~wild_index.js": "/build/vendors~app~home~wild_index.js",
-  "build/wild_index.js": "/build/wild_index.js",
-  "build/vendors~app~home.js": "/build/vendors~app~home.js",
-  "build/wild_index.css": "/build/wild_index.css"
+  "build/wild_index.css": "/build/wild_index.css",
+  "build/wild_index.js": "/build/wild_index.js"
 }
