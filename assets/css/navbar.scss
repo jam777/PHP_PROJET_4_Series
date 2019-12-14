@@ -66,3 +66,10 @@ ul .nav-item:hover {
         width: 100%;
     }
 }
+
+//Menu de Langue
+select#langage {
+    option {
+        font-size: $size_menu*0.8;
+    }
+}
