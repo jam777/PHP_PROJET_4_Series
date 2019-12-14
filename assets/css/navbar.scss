@@ -44,3 +44,25 @@ ul .nav-item:hover {
         margin: auto 0 !important;
     }
 }
+
+//Sous menu Acteurs
+.acteurs {
+    a.dropdown-item {
+        font-size: $size_menu !important;
+        color: $col_rojo !important;
+        text-align: center;
+    }
+    a.dropdown-item:hover {
+        background-color: $col_rojo;
+        color: white !important;
+    }
+    div.dropdown-menu {
+        height: 200px;
+        overflow-y: scroll;
+    }
+    //Input search
+    input.form-control {
+        font-size: $size_menu;
+        width: 100%;
+    }
+}
