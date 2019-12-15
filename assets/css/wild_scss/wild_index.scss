@@ -1,1 +1,31 @@
 @import"./assets/css/font-size.scss";
+$col_rojo:#B85C5C;
+$size_menu:1.5rem;
+//Recherche et Filtre
+//Sous menu filtre
+section.search {
+    .dropdown a {
+        font-size: $size_menu;
+    }
+    .form_search {
+        button {
+            margin-bottom: 6px !important;
+            margin-left: -5px!important;
+            font-size: $size_menu;
+        }
+        input {
+            font-size: $size_menu;
+        }
+    }
+    .dropdown-menu {
+        background-color: #ecf0f1 !important;
+        width: 17rem !important;
+        select,
+        label {
+            font-size: $size_menu;
+        }
+        button {
+            width: 7rem;
+        }
+    }
+}
