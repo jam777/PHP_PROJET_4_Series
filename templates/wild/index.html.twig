@@ -1,11 +1,77 @@
 {% extends 'base.html.twig' %} {% block title %}Accueil{% endblock %} {% block stylesheets %} {{ parent() }} {{ encore_entry_link_tags('wild_index') }} {% endblock %} {% block body %}
-<div class="search">
+
+<!-- Contenu du site -->
+<div class="content">
+
+    <!-- Recherche et Filtre -->
+    <section class="search">
+
+        <!-- Search -->
+        <div class="search_filtre row ">
+
+            <!-- Filtre -->
+            <div class="dropdown show ">
+                <a class="btn btn-primary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Filtre
+                </a>
+
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                    <form action="" class="form_filtre">
+
+                        <!-- Filtre par Année -->
+                        <label for="">Par année </label>
+                        <select name="" id="">
+                            <option value="">2019</option>
+                            <option value="">2018</option>
+                            <option value="">2017</option>
+                        </select>
+
+
+                        <!-- Filtre par Pays -->
+                        <label for="">Par Pays &nbsp</label>
+                        <select name="" id="">
+                            <option value="">France</option>
+                            <option value="">Angleterre</option>
+                            <option value="">Espagne</option>
+                        </select>
+
+                        <button class="btn btn-success">Filtrer</button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Search -->
+            <form action="" class="form_search w-75 px-0">
+                <input type="search" placeholder="Search" class="form-control w-50 d-inline-block">
+                <button class="btn btn-danger">Search</button>
+            </form>
+        </div>
+        <!-- Fin search -->
+    </section>
+
+    <!-- Titre -->
+    <section class="titre">
+
+
+    </section>
+
+    <!-- Listes des séries -->
+    <section class="series">
+
+    </section>
+
+    <!-- Pagination -->
+    <section class="pagination">
+
+    </section>
+
+    <!-- Footer -->
+    <footer>
+
+    </footer>
 
 </div>
 
-<h1 class="mt-5">Liste des Séries </h1>
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut quo non reiciendis numquam et saepe quibusdam? Modi dolores ab vel, quo necessitatibus aliquid ad sunt itaque beatae ea accusantium iusto cumque fugit, rem iure inventore est. Quia voluptates
-    atque adipisci similique, ex aliquam, consequuntur quisquam laborum eveniet quidem expedita earum?</p>
-<h2 class="mt-5">Liste des Séries </h2>
+<div class="search">
 
-{% endblock %}
+    {% endblock %}

@@ -1,7 +1,9 @@
 $col_navbar:#46403A;
 $col_rojo:#B85C5C;
+$size_menu:1.5rem;
+//Barre de navigation
 .navbar {
-    font-size: 1.5rem;
+    font-size: $size_menu;
     padding: 0 auto;
 }
 
@@ -10,7 +12,7 @@ $col_rojo:#B85C5C;
 }
 
 ul {
-    margin: 0 20px;
+    margin-left: 20px !important;
 }
 
 ul .nav-item:hover {
@@ -23,9 +25,51 @@ ul .nav-item:hover {
 
 .nav-item {
     text-align: center;
-    ;
 }
 
 .nav-link {
     display: inline-block;
+}
+
+//Sous menu Catégories
+.dropdown-menu button {
+    font-size: $size_menu;
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+@media(max-width:768px) {
+    .navbar-collapse .navbar-nav {
+        margin: auto 0 !important;
+    }
+}
+
+//Sous menu Acteurs
+.acteurs {
+    a.dropdown-item {
+        font-size: $size_menu !important;
+        color: $col_rojo !important;
+        text-align: center;
+    }
+    a.dropdown-item:hover {
+        background-color: $col_rojo;
+        color: white !important;
+    }
+    div.dropdown-menu {
+        height: 200px;
+        overflow-y: scroll;
+    }
+    //Input search
+    input.form-control {
+        font-size: $size_menu;
+        width: 100%;
+    }
+}
+
+//Menu de Langue
+select#langage {
+    option {
+        font-size: $size_menu*0.8;
+    }
 }
