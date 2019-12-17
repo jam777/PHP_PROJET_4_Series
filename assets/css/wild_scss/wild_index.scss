@@ -1,8 +1,8 @@
 @import"./assets/css/font-size.scss";
 $col_rojo:#B85C5C;
 $size_menu:1.5rem;
-$mrg_top_title:1.8rem;
-//Recherche et Filtre
+$mrg_title:2.5rem;
+//Recherche et Filtre 
 section.search {
     //Recherche
     .form_search {
@@ -58,10 +58,57 @@ section.search {
 section.titre {
     h2 {
         font-weight: bold;
-        margin-top: $mrg_top_title;
+        margin: $mrg_title 0;
         border-bottom: 7px solid $col_rojo;
     }
     @media(max-width:420px) {
+        text-align: center;
+    }
+}
+
+//Cards
+section.series {
+    h1 {
+        height: 100px;
+        line-height: 100px !important;
+        vertical-align: middle !important;
+    }
+    .card {
+        padding: 10px;
+        margin-right: 15px;
+        box-shadow: 2px 2px 8px black;
+        position: relative;
+    }
+    .card .annee {
+        position: absolute;
+        top: 1.5rem;
+        background-color: red;
+        opacity: 0.6;
+        font-size: 1.5rem;
+        height: 2.5rem;
+        width: 5rem;
+        text-align: center;
+        line-height: 2.5rem;
+        vertical-align: middle;
+    }
+    .card-img-overlay {
+        background-color: black;
+        opacity: 0;
+        transition: opacity 1s;
+    }
+    .card-img-overlay:hover {
+        opacity: 0.7;
+        font-weight: bold;
+        cursor: pointer;
+    }
+    .card-img-overlay p {
+        height: 90%;
+        overflow: scroll;
+    }
+    .card-img-overlay span {}
+    .card-body {
+        background-color: white;
+        color: black;
         text-align: center;
     }
 }
