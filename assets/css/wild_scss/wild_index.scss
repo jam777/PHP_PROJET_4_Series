@@ -1,12 +1,10 @@
 @import"./assets/css/font-size.scss";
 $col_rojo:#B85C5C;
 $size_menu:1.5rem;
+$mrg_top_title:1.8rem;
 //Recherche et Filtre
-//Sous menu filtre
 section.search {
-    .dropdown a {
-        font-size: $size_menu;
-    }
+    //Recherche
     .form_search {
         button {
             margin-bottom: 6px !important;
@@ -17,9 +15,14 @@ section.search {
             font-size: $size_menu;
         }
     }
+    //Filtre et sous-menu
+    .dropdown a {
+        font-size: $size_menu;
+    }
     .dropdown-menu {
         background-color: #ecf0f1 !important;
-        width: 17rem !important;
+        width: 18rem !important;
+        padding: 10px;
         select,
         label {
             font-size: $size_menu;
@@ -27,5 +30,38 @@ section.search {
         button {
             width: 7rem;
         }
+    }
+    //Responsive petite taille
+    @media(max-width: 420px) {
+        .dropdown,
+        .form_search {
+            margin: 0 auto !important;
+            width: 75%;
+        }
+        .dropdown-toggle {
+            width: 100%;
+        }
+        .form_search button {
+            width: 50%;
+        }
+        .dropdown-menu {
+            padding: 10px;
+            width: 14rem !important;
+        }
+        .search_filtre {
+            margin-left: 0px !important;
+        }
+    }
+}
+
+//Titre
+section.titre {
+    h2 {
+        font-weight: bold;
+        margin-top: $mrg_top_title;
+        border-bottom: 7px solid $col_rojo;
+    }
+    @media(max-width:420px) {
+        text-align: center;
     }
 }
