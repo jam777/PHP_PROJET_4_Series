@@ -75,7 +75,6 @@ section.series {
     }
     .card {
         padding: 10px;
-        margin-right: 15px;
         box-shadow: 2px 2px 8px black;
         position: relative;
     }
@@ -105,10 +104,24 @@ section.series {
         height: 90%;
         overflow: scroll;
     }
-    .card-img-overlay span {}
     .card-body {
         background-color: white;
         color: black;
         text-align: center;
+    }
+}
+
+//Pagination
+section.pagination {
+    margin: $mrg_title 0;
+    li.page-item a {
+        height: 100% !important;
+        color: $col_rojo !important;
+        // font-size: $size_menu;
+        font-weight: bold;
+    }
+    li.page-item a:hover {
+        background-color: $col_rojo;
+        color: white !important;
     }
 }

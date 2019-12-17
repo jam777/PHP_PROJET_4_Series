@@ -9,7 +9,8 @@
                             font-size: $h2*$reduc;
                         }
                         p,
-                        span {
+                        span,
+                        li.page-item a {
                             font-size: $p*$reduc;
                         }
                     }
