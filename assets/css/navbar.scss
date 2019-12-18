@@ -60,6 +60,9 @@ ul .nav-item:hover {
         height: 200px;
         overflow-y: scroll;
     }
+    .form-inline input[placeholder] {
+        text-align: center;
+    }
     //Input search
     input.form-control {
         font-size: $size_menu;
