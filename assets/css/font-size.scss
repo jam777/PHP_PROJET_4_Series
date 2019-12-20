@@ -1,0 +1,32 @@
+                // Taille de texte responsive
+                @mixin taille_text($h1:2.5rem, $h2:2rem, $p:1.5rem, $reduc:1, $ecran:1140px) {
+                    @media ( max-width: $ecran) {
+                        h1 {
+                            font-size: $h1*$reduc;
+                        }
+                        h2 {
+                            font-size: $h2*$reduc;
+                        }
+                        p,
+                        span,
+                        li.page-item a {
+                            font-size: $p*$reduc;
+                        }
+                        //image index
+                        .card-img-overlay p {
+                            font-size: 1.2rem*$reduc;
+                        }
+                        //info show titre et dexcription
+                        .info h2 {
+                            font-size: 1.5rem*$reduc;
+                        }
+                        footer {
+                            font-size: $p*$reduc;
+                        }
+                    }
+                }
+                
+                body {
+                    @include taille_text($ecran: 3000px);
+                    @include taille_text($reduc: 0.8, $ecran: 960px);
+                }

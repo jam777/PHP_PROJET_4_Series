@@ -3,25 +3,57 @@
     "app": {
       "js": [
         "/build/runtime.js",
+<<<<<<< HEAD
         "/build/app.js"
+=======
+        "/build/vendors~app~home~wild_index~wild_show.js",
+        "/build/app.js"
+      ],
+      "css": [
+        "/build/app.css"
+>>>>>>> 6da3f72e57f93fcd16417ff7e9d65ee36706c185
       ]
     },
     "home": {
       "js": [
         "/build/runtime.js",
+<<<<<<< HEAD
         "/build/home.js"
+=======
+        "/build/vendors~app~home~wild_index~wild_show.js",
+        "/build/home.js"
+      ],
+      "css": [
+        "/build/home.css"
+>>>>>>> 6da3f72e57f93fcd16417ff7e9d65ee36706c185
       ]
     },
     "wild_index": {
       "js": [
         "/build/runtime.js",
+<<<<<<< HEAD
         "/build/wild_index.js"
+=======
+        "/build/vendors~app~home~wild_index~wild_show.js",
+        "/build/wild_index.js"
+      ],
+      "css": [
+        "/build/wild_index.css"
+>>>>>>> 6da3f72e57f93fcd16417ff7e9d65ee36706c185
       ]
     },
     "wild_show": {
       "js": [
         "/build/runtime.js",
+<<<<<<< HEAD
         "/build/wild_show.js"
+=======
+        "/build/vendors~app~home~wild_index~wild_show.js",
+        "/build/wild_show.js"
+      ],
+      "css": [
+        "/build/wild_show.css"
+>>>>>>> 6da3f72e57f93fcd16417ff7e9d65ee36706c185
       ]
     }
   }

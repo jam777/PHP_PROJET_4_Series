@@ -1,0 +1,124 @@
+@import"./assets/css/font-size.scss";
+$col_rojo:#B85C5C;
+$size_menu:1.5rem;
+$mrg_title:2.5rem;
+//Recherche et Filtre 
+section.search {
+    //Recherche
+    .form_search {
+        button {
+            margin-bottom: 6px !important;
+            margin-left: -5px!important;
+            font-size: $size_menu;
+        }
+        input {
+            font-size: $size_menu;
+        }
+    }
+    //Filtre et sous-menu
+    .dropdown a {
+        font-size: $size_menu;
+        color: $col_rojo;
+        background-color: white;
+    }
+    .dropdown-menu {
+        background-color: #ecf0f1 !important;
+        width: 18rem !important;
+        padding: 10px;
+        select,
+        label {
+            font-size: $size_menu;
+        }
+        button {
+            width: 7rem;
+        }
+    }
+    //Responsive petite taille
+    @media(max-width: 420px) {
+        .dropdown,
+        .form_search {
+            margin: 0 auto !important;
+            width: 75%;
+        }
+        .dropdown-toggle {
+            width: 100%;
+        }
+        .form_search button {
+            width: 50%;
+        }
+        .dropdown-menu {
+            padding: 10px;
+            width: 13rem !important;
+        }
+        .search_filtre {
+            margin-left: 0px !important;
+        }
+    }
+}
+
+//Titre
+section.titre {
+    h2 {
+        font-weight: bold;
+        color: $col_rojo;
+        margin: $mrg_title 0;
+        border-bottom: 7px solid white;
+    }
+    @media(max-width:420px) {
+        text-align: center;
+    }
+}
+
+//Cards
+section.serie {
+    .show {
+        background-color: $col_rojo;
+        margin-bottom: 4rem;
+        padding: 4rem;
+        border-radius: 10px;
+        .synopsis {
+            h2 {
+                font-weight: bold;
+            }
+        }
+        .img_info {
+            .img {
+                box-shadow: 5px 5px 5px black !important;
+            }
+            .info {
+                .type {
+                    color: $col_rojo;
+                    background-color: white;
+                    padding: 0.8rem;
+                    h2 {
+                        margin: 0;
+                        font-weight: bold;
+                        text-align: center;
+                    }
+                }
+                .description {
+                    color: white;
+                    background-color: #954747;
+                    padding: 0.8rem;
+                    h2 {
+                        margin: 0;
+                        font-weight: bold;
+                    }
+                }
+            }
+        }
+    }
+}
+
+//Footer
+footer {
+    background-color: black;
+    margin: 0 -15px;
+    a:link {
+        text-decoration: none;
+    }
+    a {
+        color: white !important;
+        margin: 0 auto;
+    }
+}
