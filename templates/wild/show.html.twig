@@ -1,4 +1,4 @@
-{% extends 'base.html.twig' %} {% block title %}Les Séries{% endblock %} {% block stylesheets %} {{ parent() }} {{ encore_entry_link_tags('wild_index') }} {% endblock %} {% block body %}
+{% extends 'base.html.twig' %} {% block title %}Détail Série{% endblock %} {% block stylesheets %} {{ parent() }} {{ encore_entry_link_tags('wild_index') }} {% endblock %} {% block body %}
 
 <!-- Contenu du site -->
 <div class="content">
@@ -51,34 +51,32 @@
 
     <!-- Titre -->
     <section class="titre">
-        <h2>LES DERNIERES SERIES</h2>
+        <h2>SERIE : NETFLIX</h2>
     </section>
 
-    <!-- Listes des séries -->
+    <!-- Détail de la Série -->
     <section class="series">
         <div class="row m-0 justify-content-around">
             {% for i in 1..10 %}
             <div class="card bg-info text-white mb-3 col-xl-3 col-lg-4 col-md-6 col-12">
-                <a class="show_serie" href="{{ path('wild_show',{'slug': " Card Titre "}) }}">
-                    <div class="annee ">
-                        2019
-                    </div>
-                    <img class="card-img img-responsive" src="http://fr.web.img4.acsta.net/r_640_360/newsv7/19/01/24/17/06/1150483.jpg" alt="Card image">
-                    <div class="card-img-overlay">
-                        <span>Synopsis</span>
-                        <p class="card-text mt-2">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi consequuntur aspernatur culpa fugiat,
-                            voluptatem dolorem reiciendis id deserunt illo perferendis cum sunt eum quidem soluta recusandae maxime minus autem dolorum nisi, placeat ea possimus aperiam, voluptate reprehenderit quia. Suscipit dolorum repellat fugiat temporibus,
-                            velit, enim quae veniam harum recusandae rem!
-                        </p>
-                    </div>
-                    <!-- Fin card img overlay -->
-                    <div class="card-body">
-                        <h5 class="card-title mb-0">Card title</h5>
-                    </div>
-                    <!-- Fin card body -->
+                <div class="annee ">
+                    2019
+                </div>
+                <img class="card-img img-responsive" src="http://fr.web.img4.acsta.net/r_640_360/newsv7/19/01/24/17/06/1150483.jpg" alt="Card image">
+                <div class="card-img-overlay">
+                    <span>Synopsis</span>
+                    <p class="card-text mt-2">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi consequuntur aspernatur culpa fugiat,
+                        voluptatem dolorem reiciendis id deserunt illo perferendis cum sunt eum quidem soluta recusandae maxime minus autem dolorum nisi, placeat ea possimus aperiam, voluptate reprehenderit quia. Suscipit dolorum repellat fugiat temporibus,
+                        velit, enim quae veniam harum recusandae rem!
+                    </p>
+                </div>
+                <!-- Fin card img overlay -->
+                <div class="card-body">
+                    <h5 class="card-title mb-0">Card title</h5>
+                </div>
+                <!-- Fin card body -->
             </div>
             <!-- Fin card -->
-            </a>
             {% endfor %}
         </div>
         <!-- fin row -->

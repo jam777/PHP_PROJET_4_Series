@@ -1,141 +1,147 @@
-@import"./assets/css/font-size.scss";
-$col_rojo:#B85C5C;
-$size_menu:1.5rem;
-$mrg_title:2.5rem;
-//Recherche et Filtre 
-section.search {
-    //Recherche
-    .form_search {
-        button {
-            margin-bottom: 6px !important;
-            margin-left: -5px!important;
-            font-size: $size_menu;
-        }
-        input {
-            font-size: $size_menu;
-        }
-    }
-    //Filtre et sous-menu
-    .dropdown a {
-        font-size: $size_menu;
-    }
-    .dropdown-menu {
-        background-color: #ecf0f1 !important;
-        width: 18rem !important;
-        padding: 10px;
-        select,
-        label {
-            font-size: $size_menu;
-        }
-        button {
-            width: 7rem;
-        }
-    }
-    //Responsive petite taille
-    @media(max-width: 420px) {
-        .dropdown,
+    @import"./assets/css/font-size.scss";
+    $col_rojo:#B85C5C;
+    $size_menu:1.5rem;
+    $mrg_title:2.5rem;
+    //Recherche et Filtre 
+    section.search {
+        //Recherche
         .form_search {
-            margin: 0 auto !important;
-            width: 75%;
+            button {
+                margin-bottom: 6px !important;
+                margin-left: -5px!important;
+                font-size: $size_menu;
+            }
+            input {
+                font-size: $size_menu;
+            }
         }
-        .dropdown-toggle {
-            width: 100%;
-        }
-        .form_search button {
-            width: 50%;
+        //Filtre et sous-menu
+        .dropdown a {
+            font-size: $size_menu;
+            color: $col_rojo;
+            background-color: white;
         }
         .dropdown-menu {
+            background-color: #ecf0f1 !important;
+            width: 18rem !important;
             padding: 10px;
-            width: 13rem !important;
+            select,
+            label {
+                font-size: $size_menu;
+            }
+            button {
+                width: 7rem;
+            }
         }
-        .search_filtre {
-            margin-left: 0px !important;
+        //Responsive petite taille
+        @media(max-width: 420px) {
+            .dropdown,
+            .form_search {
+                margin: 0 auto !important;
+                width: 75%;
+            }
+            .dropdown-toggle {
+                width: 100%;
+            }
+            .form_search button {
+                width: 50%;
+            }
+            .dropdown-menu {
+                padding: 10px;
+                width: 13rem !important;
+            }
+            .search_filtre {
+                margin-left: 0px !important;
+            }
         }
     }
-}
-
-//Titre
-section.titre {
-    h2 {
-        font-weight: bold;
+    
+    //Titre
+    section.titre {
+        h2 {
+            font-weight: bold;
+            color: $col_rojo;
+            margin: $mrg_title 0;
+            border-bottom: 7px solid white;
+        }
+        @media(max-width:420px) {
+            text-align: center;
+        }
+    }
+    
+    //Cards
+    section.series {
+        h1 {
+            height: 100px;
+            line-height: 100px !important;
+            vertical-align: middle !important;
+        }
+        .show_serie {
+            color: white !important;
+        }
+        .card {
+            padding: 10px;
+            box-shadow: 2px 2px 8px black;
+            margin: 10px;
+            position: relative;
+        }
+        .card .annee {
+            position: absolute;
+            top: 1.5rem;
+            background-color: red;
+            opacity: 0.6;
+            font-size: 1.5rem;
+            height: 2.5rem;
+            width: 5rem;
+            text-align: center;
+            line-height: 2.5rem;
+            vertical-align: middle;
+        }
+        .card-img-overlay {
+            background-color: black;
+            opacity: 0;
+            transition: opacity 1s;
+        }
+        .card-img-overlay:hover {
+            opacity: 0.7;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        .card-img-overlay p {
+            height: 90%;
+            overflow: scroll;
+        }
+        .card-body {
+            background-color: white;
+            color: black;
+            text-align: center;
+        }
+    }
+    
+    //Pagination
+    section.pagination {
         margin: $mrg_title 0;
-        border-bottom: 7px solid $col_rojo;
+        li.page-item a {
+            height: 100% !important;
+            color: $col_rojo !important;
+            // font-size: $size_menu;
+            font-weight: bold;
+        }
+        li.page-item a:hover {
+            background-color: $col_rojo;
+            color: white !important;
+        }
     }
-    @media(max-width:420px) {
-        text-align: center;
-    }
-}
-
-//Cards
-section.series {
-    h1 {
-        height: 100px;
-        line-height: 100px !important;
-        vertical-align: middle !important;
-    }
-    .card {
-        padding: 10px;
-        box-shadow: 2px 2px 8px black;
-        margin: 10px;
-        position: relative;
-    }
-    .card .annee {
-        position: absolute;
-        top: 1.5rem;
-        background-color: red;
-        opacity: 0.6;
-        font-size: 1.5rem;
-        height: 2.5rem;
-        width: 5rem;
-        text-align: center;
-        line-height: 2.5rem;
-        vertical-align: middle;
-    }
-    .card-img-overlay {
+    
+    //Footer
+    footer {
         background-color: black;
-        opacity: 0;
-        transition: opacity 1s;
+        margin: 0 -15px;
+        a:link {
+            text-decoration: none;
+        }
+        a {
+            color: white !important;
+            margin: 0 auto;
+        }
     }
-    .card-img-overlay:hover {
-        opacity: 0.7;
-        font-weight: bold;
-        cursor: pointer;
-    }
-    .card-img-overlay p {
-        height: 90%;
-        overflow: scroll;
-    }
-    .card-body {
-        background-color: white;
-        color: black;
-        text-align: center;
-    }
-}
-
-//Pagination
-section.pagination {
-    margin: $mrg_title 0;
-    li.page-item a {
-        height: 100% !important;
-        color: $col_rojo !important;
-        // font-size: $size_menu;
-        font-weight: bold;
-    }
-    li.page-item a:hover {
-        background-color: $col_rojo;
-        color: white !important;
-    }
-}
-
-//Footer
-footer {
-    background-color: black;
-    margin: 0 -15px;
-    a:link {
-        text-decoration: none;
-    }
-    a {
-        color: white !important;
-        margin: 0 auto;
-    }
-}

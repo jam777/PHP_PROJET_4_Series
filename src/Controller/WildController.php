@@ -16,4 +16,20 @@ class WildController extends AbstractController
             'current_menu' => 'Accueil',
         ]);
     }
+
+    /**
+     * @Route("/wild/show/{slug}", name="wild_show")
+     */
+    public function show($slug)
+    {   
+
+        //Slugify le titre
+
+
+        return $this->render('wild/show.html.twig', [
+            'current_menu' => 'Show',
+        ]);
+    }
+
+
 }
