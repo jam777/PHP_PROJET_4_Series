@@ -1,0 +1,28 @@
+{
+  "entrypoints": {
+    "app": {
+      "js": [
+        "/build/runtime.js",
+        "/build/app.js"
+      ]
+    },
+    "home": {
+      "js": [
+        "/build/runtime.js",
+        "/build/home.js"
+      ]
+    },
+    "wild_index": {
+      "js": [
+        "/build/runtime.js",
+        "/build/wild_index.js"
+      ]
+    },
+    "wild_show": {
+      "js": [
+        "/build/runtime.js",
+        "/build/wild_show.js"
+      ]
+    }
+  }
+}

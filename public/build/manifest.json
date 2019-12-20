@@ -1,0 +1,12 @@
+{
+  "build/app.css": "/build/app.css",
+  "build/app.js": "/build/app.js",
+  "build/home.css": "/build/home.css",
+  "build/home.js": "/build/home.js",
+  "build/runtime.js": "/build/runtime.js",
+  "build/vendors~app~home~wild_index~wild_show.js": "/build/vendors~app~home~wild_index~wild_show.js",
+  "build/wild_index.css": "/build/wild_index.css",
+  "build/wild_index.js": "/build/wild_index.js",
+  "build/wild_show.css": "/build/wild_show.css",
+  "build/wild_show.js": "/build/wild_show.js"
+}
