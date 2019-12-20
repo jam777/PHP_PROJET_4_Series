@@ -1,4 +1,4 @@
-{% extends 'base.html.twig' %} {% block title %}Détail Série{% endblock %} {% block stylesheets %} {{ parent() }} {{ encore_entry_link_tags('wild_index') }} {% endblock %} {% block body %}
+{% extends 'base.html.twig' %} {% block title %}Détail Série{% endblock %} {% block stylesheets %} {{ parent() }} {{ encore_entry_link_tags('wild_show') }} {% endblock %} {% block body %}
 
 <!-- Contenu du site -->
 <div class="content">
@@ -55,53 +55,62 @@
     </section>
 
     <!-- Détail de la Série -->
-    <section class="series">
-        <div class="row m-0 justify-content-around">
-            {% for i in 1..10 %}
-            <div class="card bg-info text-white mb-3 col-xl-3 col-lg-4 col-md-6 col-12">
-                <div class="annee ">
-                    2019
-                </div>
-                <img class="card-img img-responsive" src="http://fr.web.img4.acsta.net/r_640_360/newsv7/19/01/24/17/06/1150483.jpg" alt="Card image">
-                <div class="card-img-overlay">
-                    <span>Synopsis</span>
-                    <p class="card-text mt-2">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi consequuntur aspernatur culpa fugiat,
-                        voluptatem dolorem reiciendis id deserunt illo perferendis cum sunt eum quidem soluta recusandae maxime minus autem dolorum nisi, placeat ea possimus aperiam, voluptate reprehenderit quia. Suscipit dolorum repellat fugiat temporibus,
-                        velit, enim quae veniam harum recusandae rem!
-                    </p>
-                </div>
-                <!-- Fin card img overlay -->
-                <div class="card-body">
-                    <h5 class="card-title mb-0">Card title</h5>
-                </div>
-                <!-- Fin card body -->
+    <section class="serie">
+        <div class="show p-sm-4 p-1 mx-sm-4 ">
+            <div class="synopsis text-white">
+                <h1>Synopsis</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem soluta, repellendus doloribus ipsam enim sequi voluptatibus delectus dolor ut facere fuga iure et tempore maiores vero nemo quo aliquam accusamus quisquam. Numquam
+                    aspernatur incidunt voluptatibus unde. Ratione et ex, voluptate corporis dolores similique beatae quam, ab iure, id quidem numquam. Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem soluta, repellendus doloribus
+                    ipsam enim sequi voluptatibus delectus dolor ut facere fuga iure et tempore maiores vero nemo quo aliquam accusamus quisquam. Numquam aspernatur incidunt volu
+                </p>
             </div>
-            <!-- Fin card -->
-            {% endfor %}
+            <!-- Fin synopsis -->
+            <div class="img_info row m-0">
+                <div class="img col-xl-6 p-2 bg-light">
+                    <img class="card-img img-responsive" src="https://larubriquedelou.fr/wp-content/uploads/2019/04/cover-article21-649x365.jpg" alt="Card image">
+                </div>
+                <div class="info col-xl-6 m-auto">
+                    <div class="titre_info row my-4 ml-xl-4 ">
+                        <div class="type col-sm-3">
+                            <h2>TITRE</h2>
+                        </div>
+                        <div class="description col-sm-9 text-sm-left text-center">
+                            <h2>DESCRIPTION</h2>
+                        </div>
+                    </div>
+                    <div class="annee_info row mb-4 ml-xl-4">
+                        <div class="type col-sm-3">
+                            <h2>ANNEE</h2>
+                        </div>
+                        <div class="description col-sm-9 text-sm-left text-center">
+                            <h2>2015</h2>
+                        </div>
+                    </div>
+                    <div class="genre_info row mb-4 ml-xl-4">
+                        <div class="type col-sm-3">
+                            <h2>GENRE</h2>
+                        </div>
+                        <div class="description col-sm-9 text-sm-left text-center">
+                            <h2>AVENTURE</h2>
+                        </div>
+                    </div>
+                    <div class="acteur_info row mb-4 ml-xl-4">
+                        <div class="type col-sm-3">
+                            <h2>ACTEURS</h2>
+                        </div>
+                        <div class="description col-sm-9 text-sm-left text-center">
+                            <h2>JOHN</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Fin img_info -->
         </div>
-        <!-- fin row -->
+        <!-- Fin show -->
     </section>
+    <!-- Fin section serie -->
 
-    <!-- Pagination -->
-    <section class="pagination">
-        <nav aria-label="Page navigation example" class="w-100">
-            <ul class="pagination justify-content-center ml-0">
-                <li class="page-item">
-                    <a class="page-link" href="#" aria-label="Previous">
-                        <span aria-hidden="true">&laquo;</span>
-                    </a>
-                </li>
-                {% for i in 1..5 %}
-                <li class="page-item "><a class="page-link" href="#">{{ i }}</a></li>
-                {% endfor %}
-                <li class="page-item">
-                    <a class="page-link" href="#" aria-label="Next">
-                        <span aria-hidden="true">&raquo;</span>
-                    </a>
-                </li>
-            </ul>
-        </nav>
-    </section>
+
 
     <!-- Footer -->
     <footer>

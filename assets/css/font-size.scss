@@ -3,7 +3,6 @@
                     @media ( max-width: $ecran) {
                         h1 {
                             font-size: $h1*$reduc;
-                            color: red !important;
                         }
                         h2 {
                             font-size: $h2*$reduc;
@@ -13,8 +12,13 @@
                         li.page-item a {
                             font-size: $p*$reduc;
                         }
+                        //image index
                         .card-img-overlay p {
                             font-size: 1.2rem*$reduc;
+                        }
+                        //info show titre et dexcription
+                        .info h2 {
+                            font-size: 1.5rem*$reduc;
                         }
                         footer {
                             font-size: $p*$reduc;

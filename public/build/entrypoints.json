@@ -3,7 +3,7 @@
     "app": {
       "js": [
         "/build/runtime.js",
-        "/build/vendors~app~home~wild_index.js",
+        "/build/vendors~app~home~wild_index~wild_show.js",
         "/build/app.js"
       ],
       "css": [
@@ -13,7 +13,7 @@
     "home": {
       "js": [
         "/build/runtime.js",
-        "/build/vendors~app~home~wild_index.js",
+        "/build/vendors~app~home~wild_index~wild_show.js",
         "/build/home.js"
       ],
       "css": [
@@ -23,11 +23,21 @@
     "wild_index": {
       "js": [
         "/build/runtime.js",
-        "/build/vendors~app~home~wild_index.js",
+        "/build/vendors~app~home~wild_index~wild_show.js",
         "/build/wild_index.js"
       ],
       "css": [
         "/build/wild_index.css"
+      ]
+    },
+    "wild_show": {
+      "js": [
+        "/build/runtime.js",
+        "/build/vendors~app~home~wild_index~wild_show.js",
+        "/build/wild_show.js"
+      ],
+      "css": [
+        "/build/wild_show.css"
       ]
     }
   }
