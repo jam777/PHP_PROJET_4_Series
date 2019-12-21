@@ -1,0 +1,150 @@
+{% extends 'base.html.twig' %} 
+{% block title %}Les Séries{% endblock %} 
+
+{% block stylesheets %} 
+{{ parent() }} {{ encore_entry_link_tags('wild_index') }} 
+{% endblock %} 
+
+{% block body %}
+
+<!-- Contenu du site -->
+<div class="content">
+
+    <!-- Recherche et Filtre -->
+    <section class="search">
+
+        <!-- Search -->
+        <div class="search_filtre row ml-2">
+
+            <!-- Filtre -->
+            <div class="dropdown show ">
+                <a class="btn dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Filtre
+                </a>
+
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                    <form action="" class="form_filtre">
+
+                        <!-- Filtre par Année -->
+                        <label for="">Par Année </label>
+                        <select name="" id="">
+                            <option value="">2019</option>
+                            <option value="">2018</option>
+                            <option value="">2017</option>
+                        </select>
+
+
+                        <!-- Filtre par Pays -->
+                        <label for="">Par Pays &nbsp</label>
+                        <select name="" id="">
+                            <option value="">France</option>
+                            <option value="">Angleterre</option>
+                            <option value="">Espagne</option>
+                        </select>
+
+                        <button class="btn btn-success filtre mt-2">Filtrer</button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Search -->
+            <form action="" class="form_search w-75 px-0">
+                <input type="search" placeholder="Search" class="form-control w-50 d-inline-block">
+                <button class="btn btn-danger">Search</button>
+            </form>
+        </div>
+        <!-- Fin search -->
+    </section>
+
+    <!-- Titre -->
+    <section class="titre">
+        <h2>CATEGORIE : {{ category.name }}</h2>
+    </section>
+
+    <!-- Listes des séries -->
+    <section class="series">
+        <div class="row m-0 justify-content-around">
+            {% for program in programs %}
+            <div class="card bg-info text-white mb-3 col-xl-3 col-lg-4 col-md-6 col-12">
+                <a class="show_serie" href="{{ path('wild_show',{'slug': program.unslugy }) }}">
+                    <div class="annee ">
+                        2019
+                    </div>
+                    <img class="card-img img-responsive" src="{{ program.poster }}" alt="Card image">
+                    <div class="card-img-overlay">
+                        <span>Synopsis</span>
+                        <p class="card-text mt-2">
+                        {{ program.summary }}
+                        </p>
+                    </div>
+                    <!-- Fin card img overlay -->
+                    <div class="card-body">
+                        <h5 class="card-title mb-0">Id : {{ program.id }}</h5>
+                        <h5 class="card-title mb-0">{{ program.title }}</h5>
+                    </div>
+                    <!-- Fin card body -->
+            </div>
+            <!-- Fin card -->
+            </a>
+            {% endfor %}
+        </div>
+        <!-- fin row -->
+    </section>
+
+    <!-- Pagination -->
+    <section class="pagination">
+        <nav aria-label="Page navigation example" class="w-100">
+            <ul class="pagination justify-content-center ml-0">
+                <li class="page-item">
+                    <a class="page-link" href="#" aria-label="Previous">
+                        <span aria-hidden="true">&laquo;</span>
+                    </a>
+                </li>
+                {% for i in 1..5 %}
+                <li class="page-item "><a class="page-link" href="#">{{ i }}</a></li>
+                {% endfor %}
+                <li class="page-item">
+                    <a class="page-link" href="#" aria-label="Next">
+                        <span aria-hidden="true">&raquo;</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="row">
+            <!-- Wild -->
+            <div class="col-md-6 mt-4">
+                <ul class="text-center m-0 p-0">
+                    <li>
+                        <a href="#!">Wild Series</a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Contact -->
+            <div class="col-md-6 mt-4 ">
+                <ul class="text-center m-0 p-0">
+                    <li>
+                        <a href="#!">Contactez-nous</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- Grid row -->
+
+        <!-- Copyright -->
+        <div class="footer-copyright text-center py-3 text-light">© 2019 Copyright:
+            <a href=""> Wild-Series.com</a>
+        </div>
+
+    </footer>
+    <!-- Footer -->
+</div>
+<!-- Fin content -->
+
+
+
+{% endblock %}
