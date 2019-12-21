@@ -22,6 +22,21 @@ class Program
     private $title;
 
     /**
+     * Permet de slufguifier une phrase
+     * Critere : Remplacer "-" par des " "
+     *           Premiere lettre de chaque mot par des majuscule   
+     *
+     * @param string $slug
+     * @return string
+     */    
+    private function unslugy(string $slug) :string
+    {   
+        $slug=str_replace(" ","-",$slug);
+        $slug=strtolower($slug);
+        return $slug;
+    }
+
+    /**
      * @ORM\Column(type="text")
      */
     private $summary;
@@ -46,6 +61,12 @@ class Program
     {
         return $this->title;
     }
+
+    public function getUnslugy() : ?string 
+    {   
+        return $this->unslugy($this->getTitle());
+    }
+
 
     public function setTitle(string $title): self
     {

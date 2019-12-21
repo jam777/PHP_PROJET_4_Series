@@ -58,29 +58,28 @@
 
     <!-- Titre -->
     <section class="titre">
-        <h2>LES DERNIERES SERIES</h2>
+        <h2>LES SERIES</h2>
     </section>
 
     <!-- Listes des séries -->
     <section class="series">
         <div class="row m-0 justify-content-around">
-            {% for i in 1..10 %}
+            {% for program in programs %}
             <div class="card bg-info text-white mb-3 col-xl-3 col-lg-4 col-md-6 col-12">
-                <a class="show_serie" href="{{ path('wild_show',{'slug':"ma-super-serie"}) }}">
+                <a class="show_serie" href="{{ path('wild_show',{'slug': program.unslugy }) }}">
                     <div class="annee ">
                         2019
                     </div>
-                    <img class="card-img img-responsive" src="https://larubriquedelou.fr/wp-content/uploads/2019/04/cover-article21-649x365.jpg" alt="Card image">
+                    <img class="card-img img-responsive" src="{{ program.poster }}" alt="Card image">
                     <div class="card-img-overlay">
                         <span>Synopsis</span>
-                        <p class="card-text mt-2">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi consequuntur aspernatur culpa fugiat,
-                            voluptatem dolorem reiciendis id deserunt illo perferendis cum sunt eum quidem soluta recusandae maxime minus autem dolorum nisi, placeat ea possimus aperiam, voluptate reprehenderit quia. Suscipit dolorum repellat fugiat temporibus,
-                            velit, enim quae veniam harum recusandae rem!
+                        <p class="card-text mt-2">
+                        {{ program.summary }}
                         </p>
                     </div>
                     <!-- Fin card img overlay -->
                     <div class="card-body">
-                        <h5 class="card-title mb-0">Card title</h5>
+                        <h5 class="card-title mb-0">{{ program.title }}</h5>
                     </div>
                     <!-- Fin card body -->
             </div>
