@@ -47,10 +47,12 @@ class Program
     private $poster;
 
     /**
-     * @ORM\ManyToOne(targetEntity="App\Entity\Category")
+     * @ORM\ManyToOne(targetEntity="App\Entity\Category", inversedBy="programs")
      * @ORM\JoinColumn(nullable=false)
      */
     private $category;
+
+    
 
     public function getId(): ?int
     {
@@ -110,4 +112,8 @@ class Program
 
         return $this;
     }
+
+    
+
+   
 }
