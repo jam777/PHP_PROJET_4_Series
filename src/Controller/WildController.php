@@ -71,11 +71,13 @@ class WildController extends AbstractController
             );
         }        
 
-        $programs=$this->repoProgram->findBy(
-            ['category'=>$category],
-            ['id'=>'DESC'],
-            3            
-        );
+        // $programs=$this->repoProgram->findBy(
+        //     ['category'=>$category],
+        //     ['id'=>'DESC'],
+        //     3            
+        // );
+
+        $programs=$category->getPrograms();
 
         return $this->render("wild/category.html.twig",[
             'current_menu' => 'Category',
