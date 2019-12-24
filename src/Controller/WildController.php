@@ -28,6 +28,11 @@ class WildController extends AbstractController
     {
         $programs=$this->repoProgram->findAll();
 
+        //dump($programs[0]->getSeasons()[1]->getYear());
+        // dump($this->repoProgram->findToto(1));
+        // die();
+
+        
 
         return $this->render('wild/index.html.twig', [
             'current_menu' => 'Accueil',
@@ -82,8 +87,8 @@ class WildController extends AbstractController
         return $this->render("wild/category.html.twig",[
             'current_menu' => 'Category',
             'categories'   => $this->categories,
-            'category'    => $category,
-            'programs'      => $programs  
+            'category'     => $category,
+            'programs'     => $programs  
             
         ]);
 

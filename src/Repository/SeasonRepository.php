@@ -22,6 +22,7 @@ class SeasonRepository extends ServiceEntityRepository
     // /**
     //  * @return Season[] Returns an array of Season objects
     //  */
+
     /*
     public function findByExampleField($value)
     {
@@ -35,6 +36,8 @@ class SeasonRepository extends ServiceEntityRepository
         ;
     }
     */
+
+
 
     /*
     public function findOneBySomeField($value): ?Season
