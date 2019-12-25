@@ -6,7 +6,7 @@
  */
 
 // any CSS you require will output into a single css file (app.css in this case)
-require('../../css/wild_scss/wild_show.scss');
+require('../../css/wild_scss/wild_season.scss');
 
 
 // Need jQuery? Install it with "yarn add jquery", then uncomment to require it.
@@ -15,18 +15,6 @@ require('bootstrap');
 
 console.log('Hello Webpack show.js Encore! Edit me in assets/js/app.js');
 
-$(".description").click(function() {
-
-    let i = $(".description i");
-
-    if (i.hasClass("fa-sort-down")) {
-        i.addClass("fa-sort-up");
-        i.removeClass("fa-sort-down");
-    } else {
-        i.addClass("fa-sort-down");
-        i.removeClass("fa-sort-up");
-    }
-
-
-
-});
+let height_img = $(".img").height();
+height_img += 16;
+$(".info").css("height", height_img);

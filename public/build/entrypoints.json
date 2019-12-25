@@ -3,7 +3,7 @@
     "app": {
       "js": [
         "/build/runtime.js",
-        "/build/vendors~app~home~wild_index~wild_show.js",
+        "/build/vendors~app~home~wild_index~wild_season~wild_show.js",
         "/build/app.js"
       ],
       "css": [
@@ -13,7 +13,7 @@
     "home": {
       "js": [
         "/build/runtime.js",
-        "/build/vendors~app~home~wild_index~wild_show.js",
+        "/build/vendors~app~home~wild_index~wild_season~wild_show.js",
         "/build/home.js"
       ],
       "css": [
@@ -23,7 +23,7 @@
     "wild_index": {
       "js": [
         "/build/runtime.js",
-        "/build/vendors~app~home~wild_index~wild_show.js",
+        "/build/vendors~app~home~wild_index~wild_season~wild_show.js",
         "/build/wild_index.js"
       ],
       "css": [
@@ -33,7 +33,7 @@
     "wild_show": {
       "js": [
         "/build/runtime.js",
-        "/build/vendors~app~home~wild_index~wild_show.js",
+        "/build/vendors~app~home~wild_index~wild_season~wild_show.js",
         "/build/wild_show.js"
       ],
       "css": [
@@ -43,7 +43,11 @@
     "wild_season": {
       "js": [
         "/build/runtime.js",
+        "/build/vendors~app~home~wild_index~wild_season~wild_show.js",
         "/build/wild_season.js"
+      ],
+      "css": [
+        "/build/wild_season.css"
       ]
     }
   }

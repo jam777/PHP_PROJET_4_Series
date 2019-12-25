@@ -1,4 +1,13 @@
-{% extends 'base.html.twig' %} {% block title %}Détail Série{% endblock %} {% block stylesheets %} {{ parent() }} {{ encore_entry_link_tags('wild_show') }} {% endblock %} {% block body %}
+{% extends 'base.html.twig' %} 
+
+{% block title %}Détail Série{% endblock %} 
+
+{% block stylesheets %} 
+    {{ parent() }} 
+    {{ encore_entry_link_tags('wild_show') }} 
+{% endblock %} 
+
+{% block body %}
 
 <!-- Contenu du site -->
 <div class="content">
@@ -56,7 +65,7 @@
 
     <!-- Détail de la Série -->
     <section class="serie">
-        <div class="show p-sm-4 p-1 mx-sm-4 ">
+        <div class="show_serie p-sm-4 p-1 mx-sm-4 ">
             <div class="synopsis text-white">
                 <h1>Synopsis</h1>
                 <p>{{ program.summary }}
@@ -104,16 +113,26 @@
                         </div>
                     </div>
                     <!-- SAISON -->
-                    <div class="genre_info row mb-4 ml-xl-4">
+                    <a class="genre_info row  ml-xl-4" data-toggle="collapse" href="#seasons" >
                         <div class="type col-sm-4">
                             <h2>SAISON(S)</h2>
                         </div>
                         <div class="description col-sm-8 text-sm-left text-center">
-                            <h2>{{ program.seasons | length}}</h2>
+                            <h2>
+                                {{ program.seasons | length}}
+                                <i class="fas fa-sort-down"></i>
+                            </h2>
+                            
                         </div>
-                    </div>
+                        <!-- Menu accéder aux saisons -->
+                        <div id="seasons" class="collapse p-0 ml-xl-4 text-center">
+                            {% for season in program.seasons %}
+                                <a href="{{ path("show_season",{"id":season.id}) }}" class=" w-75  btn m-2">Saison {{ season.number }}</a>
+                            {% endfor %}
+                        </div>
+                    </a>
                     <!-- EPISODE -->
-                    <div class="genre_info row mb-4 ml-xl-4">
+                    <div class="genre_info row mb-4 mt-4 ml-xl-4">
                         <div class="type col-sm-4">
                             <h2>EPISODE(S)</h2>
                         </div>
@@ -183,7 +202,9 @@
     <!-- Footer -->
 </div>
 <!-- Fin content -->
-
-
-
 {% endblock %}
+
+{% block javascripts %} 
+    {{ parent() }} 
+    {{ encore_entry_script_tags('wild_show') }} 
+{% endblock %} 

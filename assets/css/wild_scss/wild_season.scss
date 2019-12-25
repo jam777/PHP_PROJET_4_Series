@@ -60,7 +60,7 @@ section.search {
 section.titre {
     h2 {
         font-weight: bold;
-        color: $col_rojo;
+        color: #2c3e50;
         margin: $mrg_title 0;
         border-bottom: 7px solid white;
     }
@@ -70,69 +70,53 @@ section.titre {
 }
 
 //Cards
-section.serie {
-    .show_serie {
-        background-color: $col_rojo;
+section.saison {
+    .show {
+        background-color: #2c3e50;
         margin-bottom: 4rem;
         padding: 4rem;
         border-radius: 10px;
-        .synopsis {
-            h2 {
-                font-weight: bold;
-            }
-        }
         .img_info {
             .img {
                 box-shadow: 5px 5px 5px black !important;
                 height: 100%;
             }
             .info {
-                .type {
-                    color: $col_rojo;
-                    background-color: white;
-                    padding: 0.8rem;
-                    h2 {
-                        margin: 0;
-                        font-weight: bold;
-                        text-align: center;
-                    }
-                }
-                .description {
-                    color: white;
-                    background-color: #954747;
-                    padding: 0.8rem;
-                    &:hover {
-                        background-color: #7c3a3a;
-                    }
-                    h2 {
-                        margin: 0;
-                        font-weight: bold;
-                        position: relative;
-                    }
-                    .fa-sort-down,
-                    .fa-sort-up {
-                        font-size: 2rem;
-                        position: absolute;
-                        right: 0;
-                    }
-                }
-                #seasons {
-                    background-color: white;
-                    margin: auto -15px;
-                    a {
-                        font-size: 1.5rem !important;
-                        background-color: #954747;
-                        color: white;
-                    }
-                }
+                overflow: scroll;
             }
         }
-        .retour a {
-            font-size: $size_menu;
-            font-weight: bold;
-            &:hover {
-                color: #17a2b8 !important;
-                background-color: white !important;
+        .description {
+            h2 span {
+                font-weight: bold !important;
+                font-style: italic;
+            }
+            h2 a {
+                color: white;
+                text-decoration: underline;
+                font-style: italic;
+                font-weight: bold !important;
+            }
+            hr {
+                color: white;
+                background-color: white;
+            }
+        }
+        .img_info {
+            .info {
+                table {
+                    background-color: white !important;
+                    caption {
+                        caption-side: top !important;
+                    }
+                }
+                .retour a {
+                    font-size: $size_menu;
+                    font-weight: bold;
+                    &:hover {
+                        color: #17a2b8 !important;
+                        background-color: white !important;
+                    }
+                }
             }
         }
     }

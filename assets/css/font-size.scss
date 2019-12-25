@@ -20,6 +20,18 @@
                         .info h2 {
                             font-size: 1.5rem*$reduc;
                         }
+                        //Saison
+                        .saison {
+                            h2 {
+                                a,
+                                span {
+                                    font-size: 2rem*$reduc;
+                                }
+                            }
+                            table {
+                                font-size: 2rem*$reduc;
+                            }
+                        }
                         footer {
                             font-size: $p*$reduc;
                         }
