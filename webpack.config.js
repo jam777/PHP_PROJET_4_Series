@@ -27,6 +27,7 @@ Encore
     .addEntry('home', './assets/js/home.js')
     .addEntry('wild_index', './assets/js/wild_js/wild_index.js')
     .addEntry('wild_show', './assets/js/wild_js/wild_show.js')
+    .addEntry('wild_season', './assets/js/wild_js/wild_season.js')
 
 // When enabled, Webpack "splits" your files into smaller pieces for greater optimization.
 .splitEntryChunks()

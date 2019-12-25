@@ -2,10 +2,11 @@
 
 namespace App\Controller;
 
-use App\Repository\CategoryRepository;
+use App\Entity\Season;
 use App\Repository\ProgramRepository;
-use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use App\Repository\CategoryRepository;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
 class WildController extends AbstractController
 {   
@@ -59,7 +60,7 @@ class WildController extends AbstractController
         ]);
     }
 
-     /*Affiche toutes les Séries d'une Categorie*/
+    /*Affiche toutes les Séries d'une Categorie*/
 
     /**
      * @Route("/category/{categoryName}",name="show_category")
@@ -90,8 +91,27 @@ class WildController extends AbstractController
             'category'     => $category,
             'programs'     => $programs  
             
-        ]);
+        ]);        
 
+    }
+
+    /*Affiche Le détail d'une Saison d'une Série*/
+
+    /**
+    * @Route("/season/{id}",name="show_season")
+    */
+     public function showBySeason(Season $season){
+
+        //Récupérer la Série associé à la saison
+        $program_id=$season->getProgram()->getId();
+        $program=$this->repoProgram->find($program_id);
+        
+        return $this->render("wild/season.html.twig",[
+            'current_menu' => 'Season',
+            'categories'   => $this->categories,
+            'program'      => $program,
+            'season'       => $season
+        ]);
     }
 
 
