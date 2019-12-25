@@ -39,6 +39,12 @@
       "css": [
         "/build/wild_show.css"
       ]
+    },
+    "wild_season": {
+      "js": [
+        "/build/runtime.js",
+        "/build/wild_season.js"
+      ]
     }
   }
 }
