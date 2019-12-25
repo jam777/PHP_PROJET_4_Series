@@ -19,6 +19,16 @@ class ProgramRepository extends ServiceEntityRepository
         parent::__construct($registry, Program::class);
     }
 
+    public function findToto($program_id)
+    {
+        return $this->createQueryBuilder('p')
+            ->Where('p.id = :program_id')
+            ->setParameter('program_id', $program_id)
+            ->getQuery()
+            ->getResult()
+        ;
+    }
+
     // /**
     //  * @return Program[] Returns an array of Program objects
     //  */

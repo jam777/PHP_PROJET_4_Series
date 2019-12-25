@@ -32,11 +32,19 @@ ul .nav-item:hover {
 }
 
 //Sous menu Catégories
-.dropdown-menu button {
+.dropdown-menu a {
     font-size: $size_menu;
     display: block;
     width: 100%;
     margin-bottom: 10px;
+    color: $col_rojo !important;
+    background-color: white;
+}
+
+a:hover {
+    color: white !important;
+    background-color: $col_rojo !important;
+    text-decoration: none;
 }
 
 @media(max-width:768px) {

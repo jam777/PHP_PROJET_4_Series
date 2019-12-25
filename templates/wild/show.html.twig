@@ -51,7 +51,7 @@
 
     <!-- Titre -->
     <section class="titre">
-        <h2>SERIE : {{ titre }}</h2>
+        <h2>SERIE : {{ program.title }}</h2>
     </section>
 
     <!-- Détail de la Série -->
@@ -59,49 +59,88 @@
         <div class="show p-sm-4 p-1 mx-sm-4 ">
             <div class="synopsis text-white">
                 <h1>Synopsis</h1>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem soluta, repellendus doloribus ipsam enim sequi voluptatibus delectus dolor ut facere fuga iure et tempore maiores vero nemo quo aliquam accusamus quisquam. Numquam
-                    aspernatur incidunt voluptatibus unde. Ratione et ex, voluptate corporis dolores similique beatae quam, ab iure, id quidem numquam. Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem soluta, repellendus doloribus
-                    ipsam enim sequi voluptatibus delectus dolor ut facere fuga iure et tempore maiores vero nemo quo aliquam accusamus quisquam. Numquam aspernatur incidunt volu
+                <p>{{ program.summary }}
                 </p>
             </div>
             <!-- Fin synopsis -->
             <div class="img_info row m-0">
-                <div class="img col-xl-6 p-2 bg-light">
-                    <img class="card-img img-responsive" src="https://larubriquedelou.fr/wp-content/uploads/2019/04/cover-article21-649x365.jpg" alt="Card image">
+                <div class="img col-xl-3 p-2 bg-light">
+                    <img class="card-img img-responsive" src="{{ program.poster }}" alt="Card image">
                 </div>
+                <!-- TITLE -->
                 <div class="info col-xl-6 m-auto">
                     <div class="titre_info row my-4 ml-xl-4 ">
-                        <div class="type col-sm-3">
-                            <h2>TITRE</h2>
+                        <div class="type col-sm-4">
+                            <h2>TITLE</h2>
                         </div>
-                        <div class="description col-sm-9 text-sm-left text-center">
-                            <h2>DESCRIPTION</h2>
+                        <div class="description col-sm-8 text-sm-left text-center">
+                            <h2>{{ program.title }}</h2>
                         </div>
                     </div>
+                    <!-- ANNEE -->
                     <div class="annee_info row mb-4 ml-xl-4">
-                        <div class="type col-sm-3">
+                        <div class="type col-sm-4">
                             <h2>ANNEE</h2>
                         </div>
-                        <div class="description col-sm-9 text-sm-left text-center">
-                            <h2>2015</h2>
+                        <div class="description col-sm-8 text-sm-left text-center">
+                            {% set seasonYear = [] %}
+                            {% for season in program.seasons %}
+                                {% set seasonYear = seasonYear | merge([season.year]) %} 
+                            {% endfor %}
+                             {% if min(seasonYear) == max(seasonYear) %}
+                                 <h2>{{ min(seasonYear) }}</h2>
+                             {% else %}
+                                 <h2>{{ min(seasonYear) }} / {{ max(seasonYear) }}</h2>  
+                             {% endif %}                                                          
                         </div>
                     </div>
+                    <!-- CATEGORIE -->
                     <div class="genre_info row mb-4 ml-xl-4">
-                        <div class="type col-sm-3">
+                        <div class="type col-sm-4">
                             <h2>GENRE</h2>
                         </div>
-                        <div class="description col-sm-9 text-sm-left text-center">
+                        <div class="description col-sm-8 text-sm-left text-center">
                             <h2>AVENTURE</h2>
                         </div>
                     </div>
+                    <!-- SAISON -->
+                    <div class="genre_info row mb-4 ml-xl-4">
+                        <div class="type col-sm-4">
+                            <h2>SAISON(S)</h2>
+                        </div>
+                        <div class="description col-sm-8 text-sm-left text-center">
+                            <h2>{{ program.seasons | length}}</h2>
+                        </div>
+                    </div>
+                    <!-- EPISODE -->
+                    <div class="genre_info row mb-4 ml-xl-4">
+                        <div class="type col-sm-4">
+                            <h2>EPISODE(S)</h2>
+                        </div>
+                        <div class="description col-sm-8 text-sm-left text-center">
+                            <h2>{% set totalEpisodes=0 %}
+                                {% for season in program.seasons %}
+                                     {% set totalEpisodes=(season.episodes | length)+totalEpisodes %}
+                                {% endfor %}
+                                {{ totalEpisodes }}
+                               
+                            </h2>
+                        </div>
+                    </div>
+                    <!-- ACTEUR -->
                     <div class="acteur_info row mb-4 ml-xl-4">
-                        <div class="type col-sm-3">
+                        <div class="type col-sm-4">
                             <h2>ACTEURS</h2>
                         </div>
-                        <div class="description col-sm-9 text-sm-left text-center">
+                        <div class="description col-sm-8 text-sm-left text-center">
                             <h2>JOHN</h2>
                         </div>
                     </div>
+                    <!-- Retour page accueil -->
+                    <div class="retour row mb-4 ml-xl-4">
+                        <a href="{{ path("wild_index") }}" class="btn btn-info col-12 ">Retour</a>
+                    </div>
+                    
                 </div>
             </div>
             <!-- Fin img_info -->

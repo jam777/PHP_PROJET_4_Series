@@ -58,32 +58,28 @@
 
     <!-- Titre -->
     <section class="titre">
-        <h2>LES SERIES</h2>
+        <h2>CATEGORIE : {{ category.name }}</h2>
     </section>
 
     <!-- Listes des séries -->
     <section class="series">
         <div class="row m-0 justify-content-around">
-            {% for program in programs %}             
+            {% for program in programs %}
             <div class="card bg-info text-white mb-3 col-xl-3 col-lg-4 col-md-6 col-12">
                 <a class="show_serie" href="{{ path('wild_show',{'slug': program.unslugy }) }}">
-                    <!-- Année -->
-                    {% set i = 1.5 %}
-                    {% for season in program.seasons %}
-                    <div class="annee" style="top:{{ i }}rem !important;">                        
-                            {{ season.year }}{% set i = i+4 %}                       
-                    </div>  
-                    {% endfor %}
-                    <!-- Poster -->
+                    <div class="annee ">
+                        2019
+                    </div>
                     <img class="card-img img-responsive" src="{{ program.poster }}" alt="Card image">
                     <div class="card-img-overlay">
                         <span>Synopsis</span>
                         <p class="card-text mt-2">
-                            {{ program.summary }}
+                        {{ program.summary }}
                         </p>
                     </div>
                     <!-- Fin card img overlay -->
                     <div class="card-body">
+                        <h5 class="card-title mb-0">Id : {{ program.id }}</h5>
                         <h5 class="card-title mb-0">{{ program.title }}</h5>
                     </div>
                     <!-- Fin card body -->

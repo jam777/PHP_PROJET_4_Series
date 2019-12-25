@@ -107,6 +107,14 @@ section.serie {
                 }
             }
         }
+        .retour a {
+            font-size: $size_menu;
+            font-weight: bold;
+            &:hover {
+                color: #17a2b8 !important;
+                background-color: white !important;
+            }
+        }
     }
 }
 

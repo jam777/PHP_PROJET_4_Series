@@ -14,13 +14,14 @@
             </li>
             <!-- Catégories -->
             <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <a class="nav-link dropdown-toggle" href="#" {% if current_menu=="Category" %} style="border-bottom:solid 7px #B85C5C;padding-bottom:1px;" {% endif %} id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     Catégories
                 </a>
                 <!-- Sous Menu Catégories -->
                 <div class="dropdown-menu px-4" aria-labelledby="navbarDropdown">
-                    {% for i in 1..6 %}
-                    <button type="button" class="btn btn-outline-danger"> <a  href="#"></a>Action{{ i }}</button> {% endfor %}
+                    {% for categorie in categories %}                   
+                        <a class="btn btn-outline-danger"href="{{ path('show_category',{'categoryName':categorie.name}) }}">{{ categorie.name }}</a> 
+                    {% endfor %}
                 </div>
             </li>
             <!-- Acteurs -->
